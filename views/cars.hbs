@@ -1,0 +1,14 @@
+<div class="cars-container">
+   <h1>Our Cars</h1>
+  <div class="car-grid">
+    {{#each cars}}
+      <div class="car-item">
+        <img src="{{this.image}}" alt="{{this.model}}">
+        <h2>{{this.brand}} {{this.model}}</h2>
+        <p>Brand: {{this.brand}}</p>
+        <p>Model: {{this.model}}</p>
+        <p>Transmission: {{this.transmission}}</p>
+      </div>
+    {{/each}}
+  </div>
+</div>
