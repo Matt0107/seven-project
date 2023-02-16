@@ -7,7 +7,7 @@ const carSchema = new mongoose.Schema({
     type: String,
     seats: Number,
     transmission: String,
-    availabilty: Date
+    image: String,
   });
 
   const Car = mongoose.model('Car', carSchema);
