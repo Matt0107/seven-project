@@ -1,0 +1,13 @@
+  <h1>Liste des voitures</h1>
+  {{#if cars.length}}
+    <ul>
+      {{#each cars}}
+        <li>
+          <img src="{{this.image}}" alt="{{this.brand}} {{this.model}}">
+          {{this.brand}} {{this.model}} ({{this.energyType}})
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>Aucune voiture trouvée.</p>
+  {{/if}}
