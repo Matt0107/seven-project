@@ -34,7 +34,5 @@ const bookingSchema = new mongoose.Schema({
     ref: 'User',
   }
 });
-
 const Booking = mongoose.model('Booking', bookingSchema);
-
 module.exports = Booking;

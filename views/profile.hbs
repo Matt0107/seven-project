@@ -8,13 +8,14 @@
           <p>Your Adress: {{user.adress}} </p>
           <p>Your bookings:</p>
 
-          {{#each user.booking}}
+          {{#each books}}
            <div style="border: 1px solid #ccc; padding: 5px; margin-bottom: 5px;">
-            <p>{{this.date1}}</p>
-            <p>{{this.date2}}</p>
+            <p>{{this.pickupDate}}</p>
+            <p>{{this.returnDate}}</p>
             <p>{{this.car}}</p>
           </div>     
           {{/each}}  
+
 </div>
     {{else}}
     {{/if}}
