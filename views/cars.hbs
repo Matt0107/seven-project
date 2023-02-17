@@ -1,13 +1,17 @@
-<div class="cars-container">
-   <h1>Our Cars</h1>
-  <div class="car-grid">
+<div class="cars-container" style="display: grid; grid-template-columns: 1fr; grid-gap: 20px; padding: 20px; text-align: center;">
+   <h1 style="margin: 0;">Our Cars</h1>
+  <div class="car-grid" style="display: grid; grid-template-columns: 1fr; grid-gap: 20px;">
     {{#each cars}}
-      <div class="car-item">
-        <img src="{{this.image}}" alt="{{this.model}}">
-        <h2>{{this.brand}} {{this.model}}</h2>
-        <p>Brand: {{this.brand}}</p>
-        <p>Model: {{this.model}}</p>
-        <p>Transmission: {{this.transmission}}</p>
+      <div class="ocar" style="display: grid; grid-template-columns: auto 1fr; grid-gap: 10px; border: 1px solid #ddd; padding: 10px; text-align:left;">
+          <img src={{image}} alt="image" style="width: 60%; height: auto; align-self: center;">
+          <div style="display: flex; flex-direction: column; justify-content: center;">
+              <div style="font-size: 2rem; font-weight: bold; margin-bottom: 10px;">{{brand}}</div>
+              <div style="font-size: 1.5rem; font-weight: bold;">MODEL: {{model}}</div>
+              <div style="font-weight: bold;">Doors : {{doors}}</div>
+              <div style="font-weight: bold;">Energy : {{type}}</div>
+              <div style="font-weight: bold;">Seats : {{seats}}</div>
+              <div style="font-weight: bold;">Transmission : {{transmission}}</div>
+          </div>   
       </div>
     {{/each}}
   </div>

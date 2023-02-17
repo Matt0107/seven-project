@@ -1,0 +1,51 @@
+<div class="pro">
+    <div  class="one" style="display: flex; flex-wrap: wrap; justify-content: space-between; max-width: 800px; margin: 0 auto;">
+    <div style="flex-basis: 60%;">
+    {{#if user}} 
+        <div class="each" style="border: 1px solid #ccc; padding: 20px; margin-bottom: 20px;">
+          <p>Hello {{user.name}} ! </p>
+          <p>Email: {{user.email}}</p>
+          <p>Your Adress: {{user.adress}} </p>
+          <p>Your bookings:</p>
+
+          {{#each books}}
+           <div style="border: 1px solid #ccc; padding: 5px; margin-bottom: 5px;">
+            <p>{{this.pickupDate}}</p>
+            <p>{{this.returnDate}}</p>
+            <p>{{this.car}}</p>
+          </div>     
+          {{/each}}  
+
+</div>
+    {{else}}
+    {{/if}}
+  </div>
+  <div style="flex-basis: 35%;">
+  </div>
+        </div>
+    <div class="two">
+    {{>booking}}
+    </div>
+
+</div>
+
+<style>
+    .two{
+        width: 50vw;
+    }
+    .one{
+        width:50vw;
+        background-color: grey;
+    }
+    .pro{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        width: 100vw;
+        height: 80vh;
+    }
+    .each{
+        text-align: center;
+        width: 43vw;
+    }
+</style>

@@ -1,0 +1,50 @@
+<h1>{{title}}</h1>
+
+{{#if error}}
+  <p style="color: red;">{{error}}</p>
+{{/if}}
+
+<form method="POST" action="/booking">
+  <label for="name">Nom</label>
+  <input type="text" name="name" id="name"> 
+  <br>
+
+
+  <label for="email">Email</label>
+  <input type="email" name="email" id="email">
+  <br>
+
+  <label for="phone">Téléphone</label>
+  <input type="tel" name="phone" id="phone">
+  <br>
+
+  <label for="pickupOption">Prise en charge / livraison</label>
+  <div>
+    <input type="radio" name="pickupOption" id="center" value="center" checked>
+    <label for="center">Prise en charge au centre</label>
+  </div>
+  <div>
+    <input type="radio" name="pickupOption" id="delivery" value="delivery">
+    <label for="delivery">Livraison</label>
+  </div>
+  <br>
+
+  <label for="pickupDate">Date de prise en charge</label>
+  <input type="date" name="pickupDate" id="pickupDate" min="{{minDate}}">
+  <br>
+
+  <label for="returnDate">Date de retour</label>
+  <input type="date" name="returnDate" id="returnDate" min="{{minDate}}">
+
+<label for="car">Choose a car:</label>
+<select name="car" id="car" form="car">
+  <option value="Mercedes-Benz">Mercedes-Benz</option>
+  <option value="BMW">BMW</option>
+  <option value="Audi">Audi</option>
+  <option value="Lexus">Lexus</option>
+  <option value="Lexus">Rolls-Royce
+</option>
+    <option value="Lexus">Porsche</option>
+</select>
+  <button type="submit">Réserver</button>
+</form>
