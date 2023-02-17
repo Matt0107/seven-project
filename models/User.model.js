@@ -1,25 +1,25 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-const Car = require('./car.model');
+const mongoose = require("mongoose");
+// const bcrypt = require('bcrypt');
+const Car = require("./car.model");
 
 const userSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: false,
-    required: true
+    required: true,
   },
   password: {
     type: String,
     required: true,
   },
-  name:{
-    type:String,
+  name: {
+    type: String,
     required: false,
   },
-  adress:{
-    type:String,
+  adress: {
+    type: String,
     required: false,
-  }
+  },
 });
 
 // Hash password before saving to database
@@ -33,11 +33,10 @@ const userSchema = new mongoose.Schema({
 // });
 
 // Check if password is correct
-userSchema.methods.checkPassword = async function(password) {
-  return await bcrypt.compare(password, this.password);
-}
+// userSchema.methods.checkPassword = async function (password) {
+//   return await bcrypt.compare(password, this.password);
+// };
 
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model("User", userSchema);
 
 module.exports = User;
-
