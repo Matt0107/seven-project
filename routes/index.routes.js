@@ -285,11 +285,5 @@ c.save()
 d.save()
 e.save()
 f.save()
-let mo = new User({
-  email: "ofkirmohamed8@getMaxListeners.com",
-  password: 145,
-  name:"ofkir",
-  adress:"114 rue des acacias"
-})
-mo.save()
+
 module.exports = router;

@@ -11,7 +11,7 @@ const bookingSchema = new mongoose.Schema({
   },
   phone: {
     type: String,
-    required: true
+    required: true  
   },
   pickupOption: {
     type: String,
