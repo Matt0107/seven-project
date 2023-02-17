@@ -120,11 +120,11 @@ router.get("/confirmation", (req, res, next) => {
 const User = require("../models/User.model");
 
 // création comptex
-router.get("/signup", (req, res, next) => {
-  res.render("signup");
+router.get("/enteraccount", (req, res, next) => {
+  res.render("enteraccount");
 });
 
-router.post("/signup", (req, res, next) => {
+router.post("/enteraccount", (req, res, next) => {
   console.log("log");
   const { email, password, name, adress } = req.body;
   const user = new User({ email, password, name, adress });
